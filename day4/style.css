@@ -1,0 +1,194 @@
+/* 1. Define the light theme colours */
+:root {
+    --bg-color: #f3f5f9;
+    --text-color: #222222;
+    --card-color: #ffffff;
+    --header-color: #304a72;
+    --border-color: #d5dbe5;
+    --button-color: #304a72;
+    --button-text: #ffffff;
+    --muted-color: #666666;
+}
+
+/* 2. Reset sizing */
+* {
+    box-sizing: border-box;
+}
+
+/* 3. Page styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* 4. Dark theme changes only the variables */
+body.dark {
+    --bg-color: #171923;
+    --text-color: #f1f1f1;
+    --card-color: #252a38;
+    --header-color: #111827;
+    --border-color: #4a5060;
+    --button-color: #526b96;
+    --button-text: #ffffff;
+    --muted-color: #c0c5d0;
+}
+
+/* 5. Header */
+header {
+    background-color: var(--header-color);
+    color: #ffffff;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+header h1 {
+    margin: 0 0 8px;
+}
+
+header p {
+    margin: 0;
+}
+
+/* 6. Main content */
+main {
+    width: 100%;
+    max-width: 760px;
+    margin: 35px auto;
+    padding: 0 20px;
+}
+
+.notes-card {
+    background-color: var(--card-color);
+    padding: 25px;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.notes-card h2 {
+    margin-top: 0;
+}
+
+/* 7. Textarea */
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+textarea {
+    display: block;
+    width: 100%;
+    min-height: 220px;
+    padding: 14px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font: inherit;
+    resize: vertical;
+}
+
+textarea:focus {
+    outline: 2px solid var(--button-color);
+    outline-offset: 2px;
+}
+
+/* 8. Character and word counters */
+.counters {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.counters p {
+    margin: 0;
+}
+
+/* Orange warning after 180 characters */
+.warning {
+    color: #d97706;
+}
+
+/* Red, bold warning after 200 characters */
+.over {
+    color: #dc2626;
+    font-weight: bold;
+}
+
+/* 9. Buttons */
+.actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 18px;
+    border: none;
+    border-radius: 6px;
+    background-color: var(--button-color);
+    color: var(--button-text);
+    font: inherit;
+    cursor: pointer;
+    transition: opacity 0.2s, transform 0.2s;
+}
+
+button:hover {
+    opacity: 0.85;
+    transform: translateY(-1px);
+}
+
+button:focus-visible {
+    outline: 2px solid var(--text-color);
+    outline-offset: 3px;
+}
+
+/* 10. Hint and footer */
+.hint {
+    margin-bottom: 0;
+    color: var(--muted-color);
+    font-size: 0.9rem;
+}
+
+footer {
+    padding: 20px;
+    text-align: center;
+    color: var(--muted-color);
+}
+
+/* 11. Responsive layout */
+@media (max-width: 600px) {
+    header {
+        padding: 22px 14px;
+    }
+
+    main {
+        margin: 20px auto;
+        padding: 0 12px;
+    }
+
+    .notes-card {
+        padding: 18px;
+    }
+
+    .counters {
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .actions {
+        flex-direction: column;
+    }
+
+    button {
+        width: 100%;
+    }
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 4 - Notes Draft</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>QuickNotes Draft</h1>
+        <p>Write your thoughts and keep them safe.</p>
+    </header>
+
+    <main>
+        <section class="notes-card">
+            <h2>Your draft</h2>
+
+            <label for="note-text">Write your note below:</label>
+            <textarea
+                id="note-text"
+                rows="10"
+                placeholder="Start typing here..."
+            ></textarea>
+
+            <div class="counters">
+                <p id="char-count">0 / 200 characters</p>
+                <p id="word-count">0 words</p>
+            </div>
+
+            <div class="actions">
+                <button type="button" id="clear-btn">Clear</button>
+                <button type="button" id="theme-toggle">Dark mode</button>
+            </div>
+
+            <p class="hint">Tip: Press Escape while typing to clear your draft.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Day 4 Web Foundations Assignment</p>
+    </footer>
+</body>
+</html>
