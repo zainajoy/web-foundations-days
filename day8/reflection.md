@@ -1,0 +1,9 @@
+# Day 8 Reflection
+
+The most difficult concept in this course was understanding how to design a system that remains correct when many users make requests at the same time. Before learning system design, I mainly focused on whether an application worked for one user. I learned that a real application must also handle heavy traffic, failures, and competing requests. I overcame this challenge by breaking the system into components, estimating traffic, and studying how database transactions, row-level locks, and unique constraints prevent two customers from buying the same seat.
+
+One part of my TicketHub capstone that I would improve is the traffic estimation and capacity planning. The calculations provide a useful starting point, but real traffic can arrive in sudden bursts, and different API requests require different amounts of processing. Based on feedback about the importance of realistic estimates and clear explanations, I would improve the design by adding load-testing results, more detailed database capacity estimates, and a clearer explanation of how the waiting room controls incoming purchase requests.
+
+Next, I want to learn more about cloud infrastructure, Docker, Kubernetes, monitoring, and automated deployment. I also want to practise building REST APIs and working with databases through practical projects. These skills will help me move from designing systems on paper to deploying applications that are reliable, secure, and able to scale in real-world conditions.
+
+This course has helped me understand that good software engineering is not only about writing code. It is also about making thoughtful decisions about performance, reliability, security, and the experience of the people using the system.
